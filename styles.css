@@ -28,6 +28,19 @@ body{
 input{
     cursor: pointer;
 }
+#submit,
+.btn{
+    outline: none;
+    display: block;
+    margin: auto;
+    border: none;
+    color: aliceblue;
+    background-color: coral;
+    
+}
+#submit:hover{
+    background-color: brown;
+}
 .charecter{
     background-image: url(charecter.png);
     background-repeat: no-repeat;
