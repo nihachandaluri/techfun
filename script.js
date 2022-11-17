@@ -88,8 +88,10 @@ const option4 = document.querySelector('#option4');
 const submit = document.querySelector('#submit');
 
 const answers = document.querySelectorAll('.answer');
+const showScore = document.querySelector('#showScore');
 
 let questionCount = 0;
+let score=0;
 
 const loadQuestion = () => {
 
@@ -104,7 +106,7 @@ const loadQuestion = () => {
     
 }
 
-
+loadQuestion();
 
 const getCheckAnswer = () => {
     let answer;
@@ -120,7 +122,7 @@ const getCheckAnswer = () => {
 };
 
 const deselectAll = () => {
-    answers.foreach((curAnsElem) => curAnsElem.checked = false);
+    answers.foreach((curAnsElem) => curAnsElem.checked = false );
 }
 
 submit.addEventListener('click', () => {
