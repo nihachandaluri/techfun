@@ -88,22 +88,23 @@ const option4 = document.querySelector('#option4');
 const submit = document.querySelector('#submit');
 
 const answers = document.querySelectorAll('.answer');
+
 let questionCount = 0;
 
 const loadQuestion = () => {
 
     const questionList = quizDB[questionCount];
 
-    question.innerText = questionList.question;
+    question.innerHTML=  questionList.question;
 
-    option1.innerText = questionList.a;
-    option2.innerText = questionList.b;
-    option3.innerText = questionList.c;
-    option4.innerText = questionList.d;
+    option1.innerHTML = questionList.a;
+    option2.innerHTML = questionList.b;
+    option3.innerHTML = questionList.c;
+    option4.innerHTML = questionList.d;
     
+}
 
 
-loadQuestion();
 
 const getCheckAnswer = () => {
     let answer;
@@ -117,11 +118,18 @@ const getCheckAnswer = () => {
     return answer;
 
 };
+
+const deselectAll = () => {
+    answers.foreach((curAnsElem) => curAnsElem.checked = false);
+}
+
 submit.addEventListener('click', () => {
     const checkedAnswer = getCheckAnswer();
     console.log(checkedAnswer);
 
     questionCount++;
+
+    deselectAll();
 
 if(questionCount < quizDB.length){
     loadQuestion();
