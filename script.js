@@ -78,85 +78,28 @@ const  quizDB = [
         c:"PUXY",
         d:"PXYU",
         ans: ""
-    },
-    {
-        question: "Q11:",
-        a:"",
-        b:"",
-        c:"",
-        d:"",
-        ans: ""
-    },
-    {
-        question: "Q12:",
-        a:"",
-        b:"",
-        c:"",
-        d:"",
-        ans: ""
-    },
-    {
-        question: "Q13:",
-        a:"",
-        b:"",
-        c:"",
-        d:"",
-        ans: ""
-    },
-    {
-        question: "Q14:",
-        a:"",
-        b:"",
-        c:"",
-        d:"",
-        ans: ""
-    },
-    {
-        question: "Q15:",
-        a:"",
-        b:"",
-        c:"",
-        d:"",
-        ans: ""
-    },
-    {
-        question: "Q16:",
-        a:"",
-        b:"",
-        c:"",
-        d:"",
-        ans: ""
-    },
-    {
-        question: "Q17:",
-        a:"",
-        b:"",
-        c:"",
-        d:"",
-        ans: ""
-    },
-    {
-        question: "Q18:",
-        a:"",
-        b:"",
-        c:"",
-        d:"",
-        ans: ""
-    },
-    {
-        question: "Q19:",
-        a:"",
-        b:"",
-        c:"",
-        d:"",
-        ans: ""
-    },
-    {
-        question: "Q20:",
-        a:"",
-        b:"",
-        c:"",
-        d:"",
-        ans: ""
     }
 ];
+const question = document.querySelector('.question');
+const option1 = document.querySelector('#option1');
+const option2 = document.querySelector('#option2');
+const option3 = document.querySelector('#option3');
+const option4 = document.querySelector('#option4');
+const submit = document.querySelector('#submit');
+
+let questionCount = 0;
+
+const loadQuestion = () => {
+
+    const questionList = quizDB[questionCount];
+
+    question.innerText = questionList.question;
+
+    option1.innerText = questionList.a;
+    option2.innerText = questionList.b;
+    option3.innerText = questionList.c;
+    option4.innerText = questionList.d;
+    
+}
+
+loadQuestion();
