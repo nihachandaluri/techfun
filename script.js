@@ -87,6 +87,7 @@ const option3 = document.querySelector('#option3');
 const option4 = document.querySelector('#option4');
 const submit = document.querySelector('#submit');
 
+const answers = document.querySelectorAll('.answer');
 let questionCount = 0;
 
 const loadQuestion = () => {
@@ -100,6 +101,30 @@ const loadQuestion = () => {
     option3.innerText = questionList.c;
     option4.innerText = questionList.d;
     
-}
+
 
 loadQuestion();
+
+const getCheckAnswer = () => {
+    let answer;
+
+    answers.forEach((curAnsElem) => {
+        if(curAnsElem.checked){
+            answer = curAnsElem.id;
+        }
+    });
+
+    return answer;
+
+};
+submit.addEventListener('click', () => {
+    const checkedAnswer = getCheckAnswer();
+    console.log(checkedAnswer);
+
+    questionCount++;
+
+if(questionCount < quizDB.length){
+    loadQuestion();
+}
+    
+});
