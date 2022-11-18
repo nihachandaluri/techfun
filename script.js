@@ -1,11 +1,11 @@
-const  quizDB = [
+const  quizData = [
     {
         question: "Q1: Documents, Movies, Images and Photographs etc are stored at a?",
         a:"application server",
         b:"web server",
         c:"print server",
         d:"file server",
-        ans: "ans4"
+        correct: "d",
     },
     {
         question: "Q2:Technology used to provide internet by transmitting data over wires of telephone network is ?",
@@ -13,7 +13,7 @@ const  quizDB = [
         b:"DSL",
         c:"HHL",
         d:"Diodes",
-        ans: "ans2"
+        correct: "b",
     },
     {
         question: "Q3:In which of the following form, data is stored in computer ?",
@@ -21,7 +21,7 @@ const  quizDB = [
         b:"Decimal",
         c:"Hectadecimal",
         d:"octadecimal",
-        ans: "ans1"
+        correct: "a",
     },
     {
         question: "Q4:  Where is RAM located ?",
@@ -29,7 +29,7 @@ const  quizDB = [
         b:"External drive",
         c:"Mother board",
         d:"All the above",
-        ans: "ans3"
+        correct: "c",
     },
     {
         question: "Q5: Who was the founder of Bluetooth? ",
@@ -37,7 +37,7 @@ const  quizDB = [
         b:"Martin Cooper",
         c:"Steeve",
         d:"Apple",
-        ans: "ans1"
+        correct: "a",
     },
     {
         question: "Q6:AD,EH,IL,__,QT,UX?",
@@ -45,7 +45,7 @@ const  quizDB = [
         b:"MN",
         c:"MO",
         d:"MQ",
-        ans: "ans1"
+        correct: "a",
     },
     {
         question: "Q7: mechanic:wrench::surgeon",
@@ -53,7 +53,7 @@ const  quizDB = [
         b:"stethoscope",
         c:"scalpel",
         d:"x-ray",
-        ans: "ans3"
+        correct: "c",
     },
     {
         question: "Q8:Find the odd one out of the series 53,59,61,87",
@@ -61,7 +61,7 @@ const  quizDB = [
         b:"59",
         c:"61",
         d:"87",
-        ans: "ans4"
+        correct: "d",
     },
     {
         question: "Q9:What does LG stands for in LG Electronics",
@@ -69,7 +69,7 @@ const  quizDB = [
         b:"Lucky goldstar",
         c:"Luck goldster",
         d:"Lucky golden",
-        ans: "ans2"
+        correct: "b",
     },
     {
         question: "Q10:If Computer-QSTRVYUP and Science-XQZUWQU then rest-?",
@@ -77,64 +77,63 @@ const  quizDB = [
         b:"RUXT",
         c:"PUXY",
         d:"PXYU",
-        ans: ""
-    }
+        correct: "c",
+    },
 ];
-const question = document.querySelector('.question');
-const option1 = document.querySelector('#option1');
-const option2 = document.querySelector('#option2');
-const option3 = document.querySelector('#option3');
-const option4 = document.querySelector('#option4');
-const submit = document.querySelector('#submit');
 
-const answers = document.querySelectorAll('.answer');
-const showScore = document.querySelector('#showScore');
+const quiz= document.getElementById('.quiz');
+const answerEls = document.querySelectorAll('.answer')
+const questionEl = document.getElementById('question')
+const a_text = document.getElementById('a_text')
+const b_text = document.getElementById('b_text')
+const c_text = document.getElementById('c_text')
+const d_text = document.getElementById('d_text')
+const submitBtn = document.getElementById('submit')
 
-let questionCount = 0;
+let currentQuiz = 0;
 let score=0;
 
-const loadQuestion = () => {
+loadQuiz()
 
-    const questionList = quizDB[questionCount];
+function loadQuiz() {
 
-    question.innerHTML=  questionList.question;
+    deselectAnswers()
 
-    option1.innerHTML = questionList.a;
-    option2.innerHTML = questionList.b;
-    option3.innerHTML = questionList.c;
-    option4.innerHTML = questionList.d;
-    
+    const currentQuizData = quizData[currentQuiz]
+
+    questionEl.innerText = currentQuizData.question
+    a_text.innerText = currentQuizData.a
+    b_text.innerText = currentQuizData.b
+    c_text.innerText = currentQuizData.c
+    d_text.innerText = currentQuizData.d
+
 }
 
-loadQuestion();
+function deselectAnswers() {
+    answerEls.forEach(answerEl => answerEl.checked = false)
+}
 
-const getCheckAnswer = () => {
-    let answer;
-
-    answers.forEach((curAnsElem) => {
-        if(curAnsElem.checked){
-            answer = curAnsElem.id;
+function getSelected() {
+    let answer
+    answerEls.forEach(answerEl => {
+        if(answerEl.checked){
+            answer = answerEl.id
         }
-    });
-
-    return answer;
-
-};
-
-const deselectAll = () => {
-    answers.foreach((curAnsElem) => curAnsElem.checked = false );
+    })
+    return answer
 }
+submitBtn.addEventListener('click', () => {
+    const answer = getSelected()
+    if(answer) {
+        if(answer === quizData[currentQuiz].correct) {
+            score++
+        }
 
-submit.addEventListener('click', () => {
-    const checkedAnswer = getCheckAnswer();
-    console.log(checkedAnswer);
+        currentQuiz++
 
-    questionCount++;
-
-    deselectAll();
-
-if(questionCount < quizDB.length){
-    loadQuestion();
-}
-    
-});
+        if(currentQuiz < quizData.length) {
+            loadQuiz()
+        
+        }
+    }
+})
