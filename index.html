@@ -11,24 +11,40 @@
 </head>
 
 <body class=main>
+    <div id="hello"></div>
+    <script type ="text/javascript">
+        what();
+        function what(){
+            document.getElementById('hello').innerHTML = 'hi';
+        };
+    </script>
     
-    <script src="script.js"></script>
+    
     <div class="gamecontainer">
         <div class="gameover">Game Over</div>
         <div class="charecter"></div>
         <div id="scorecount">Score: 0 </div>
-    </div>
+    
     <div class="quiz-box custom-box">
         <div class="question-number">
+            
         </div>
         <div class="question-text">
+            
         </div>
         <div class="option-container">
+            <div class="option"></div>
+            <div class="option"></div>
+            <div class="option"></div>
+            <div class="option"></div>
         </div>
         <div class="next-question-btn">
             <button type="button" class="btn">Next</button>
         </div>
-        <div class="ansswers-indicator"></div>
+        
     </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
