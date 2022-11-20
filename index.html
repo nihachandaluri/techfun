@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TECHFUN GAME</title>
     <link rel="stylesheet" href="styles.css">
-    
+
 
 </head>
 
 <body class=main>
     <div id="hello"></div>
-    <script type ="text/javascript">
+    <script type="text/javascript">
         what();
-        function what(){
+
+        function what() {
             document.getElementById('hello').innerHTML = '';
         };
     </script>
-    
-    
+
+
     <div class="gamecontainer">
-        <div class="charecter"></div>
-        <div class="quiz-container" id="quiz"> 
+        <div class="charecter" id="charecter"></div>
+        <div class="quiz-container" id="quiz">
             <div class="quiz-header">
                 <h2 id="question">Question Text</h2>
                 <ul>
@@ -45,8 +47,9 @@
                 </ul>
             </div>
             <button id="submit">Submit</button>
-    
+
         </div>
         <script src="script.js"></script>
 </body>
+
 </html>
