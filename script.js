@@ -124,18 +124,19 @@ function getSelected() {
 }
 submitBtn.addEventListener('click', () => {
     const answer = getSelected()
+    
     if(answer) {
-        if(answer === quizData[currentQuiz].correct) {
+        if(answer === quizData[currentQuiz].correct){
             charecter = document.querySelector('.charecter');
-            charecter.classList.add('animatecharecter');          
-           
+            charecter.classList.add('animatecharecter'); 
         }
-
-        currentQuiz++
+        } 
+            currentQuiz++
 
         if(currentQuiz < quizData.length) {
             loadQuiz()
 
         } 
-    }
+    
+    
 })
