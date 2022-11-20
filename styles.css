@@ -53,9 +53,8 @@ input{
     cursor: pointer;
 }
 input{
-    position: absolute;
-    bottom: 360px;
-    left: 120px;
+    position: relative;
+    
 }
 .quiz-container {
     background-color: beige;

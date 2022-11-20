@@ -128,8 +128,9 @@ submitBtn.addEventListener('click', () => {
         if (answer == quizData[currentQuiz].correct) {
             let charecter = document.getElementById('charecter');
             console.log("Moved")
-            charecter.style.left = charecter.getBoundingClientRect().left + 50 + 'px';
+            charecter.style.left = charecter.getBoundingClientRect().left + 133 + 'px';
         }
+      
     }
     currentQuiz++
 
