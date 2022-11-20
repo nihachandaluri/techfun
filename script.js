@@ -128,7 +128,7 @@ submitBtn.addEventListener('click', () => {
     if(answer) {
         if(answer === quizData[currentQuiz].correct){
             charecter = document.querySelector('.charecter');
-            charecter.classList.add('animatecharecter'); 
+            charecter.style.marginLeft += "75px";
         }
         
             currentQuiz++
