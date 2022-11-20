@@ -130,7 +130,7 @@ submitBtn.addEventListener('click', () => {
             charecter = document.querySelector('.charecter');
             charecter.classList.add('animatecharecter'); 
         }
-        } 
+        
             currentQuiz++
 
         if(currentQuiz < quizData.length) {
@@ -138,5 +138,5 @@ submitBtn.addEventListener('click', () => {
 
         } 
     
-    
+    }
 })
