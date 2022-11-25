@@ -1,4 +1,4 @@
-const startingMinutes = 0;
+const startingMinutes = 5;
 let time = startingMinutes * 60;
  
 const countdownEl = document.getElementById('countdown');
@@ -12,7 +12,7 @@ function updateCountdown() {
     seconds = seconds < 10 ? '0' + seconds : seconds;
 
     countdownEl.innerHTML = `${minutes}:${seconds}`;
-    time++;
+    time--;
 }
 
 const quizData = [{
@@ -138,6 +138,8 @@ function getSelected() {
     })
     return answer
 }
+
+
 submitBtn.addEventListener('click', () => {
     const answer = getSelected()
 
@@ -155,6 +157,7 @@ submitBtn.addEventListener('click', () => {
         loadQuiz()
 
     }
+    
 
 
 })
