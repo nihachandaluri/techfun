@@ -1,14 +1,14 @@
 const startingMinutes = 5;
 let time = startingMinutes * 60;
- 
+
 const countdownEl = document.getElementById('countdown');
 
 setInterval(updateCountdown, 1000);
 
 function updateCountdown() {
-    const minutes= Math.floor(time / 60);
+    const minutes = Math.floor(time / 60);
     let seconds = time % 60;
-    
+
     seconds = seconds < 10 ? '0' + seconds : seconds;
 
     countdownEl.innerHTML = `${minutes}:${seconds}`;
@@ -139,6 +139,8 @@ function getSelected() {
     return answer
 }
 
+let nMoved = 0;
+
 
 submitBtn.addEventListener('click', () => {
     const answer = getSelected()
@@ -147,9 +149,15 @@ submitBtn.addEventListener('click', () => {
         if (answer == quizData[currentQuiz].correct) {
             let charecter = document.getElementById('charecter');
             console.log("Moved")
+            nMoved++;
             charecter.style.left = charecter.getBoundingClientRect().left + 133 + 'px';
         }
-      
+
+        if (nMoved == 10) {
+            document.getElementById('gamecontainer').style.display = "none";
+            document.getElementById('gameover').style.display = "flex";
+        }
+
     }
     currentQuiz++
 
@@ -157,7 +165,7 @@ submitBtn.addEventListener('click', () => {
         loadQuiz()
 
     }
-    
+
 
 
 })
