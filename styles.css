@@ -1,8 +1,9 @@
-*{
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
 }
-body{
+
+body {
     font-family: 'Nanum Gothic', sans-serif;
     display: flex;
     align-items: center;
@@ -11,20 +12,22 @@ body{
     overflow: hidden;
     margin: 0;
 }
-.gamecontainer{
+
+.gamecontainer {
     background-color: brown;
     background-image: url(bg.jpg);
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
     width: 100%;
     height: 100vh;
-
 }
-input{
+
+input {
     cursor: pointer;
 }
+
 #submit,
-.btn{
+.btn {
     outline: none;
     display: block;
     margin: auto;
@@ -34,12 +37,13 @@ input{
     border-top: 1px solid #cccccc;
     cursor: pointer;
     font-family: 'Nanum Gothic', sans-serif;
-    
 }
-#submit:hover{
+
+#submit:hover {
     background-color: brown;
 }
-.charecter{
+
+.charecter {
     background-image: url(charecter.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -50,13 +54,14 @@ input{
     left: 120px;
 }
 
-input{
+input {
     cursor: pointer;
 }
-input{
+
+input {
     position: relative;
-    
 }
+
 .quiz-container {
     background-color: beige;
     border-radius: 10px;
@@ -71,48 +76,57 @@ input{
     place-content: center;
     margin-top: 10px;
     font-family: 'Nanum Gothic', sans-serif;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 25a31745dd108f5f8c8a49ba61b3f3774c535d4b
 }
+
 .quiz-header {
     padding: 1rem;
 }
+
 h2 {
     padding: 1rem;
     text-align: center;
     margin: 0;
 }
-body{
+
+body {
     background-size: 100vw 100vh;
     width: 100%;
     height: 100vh;
     place-content: center;
     font-family: 'Nanum Gothic', sans-serif;
-
 }
-input{
+
+input {
     cursor: pointer;
 }
-ul{
-    list-style-type:none;
+
+ul {
+    list-style-type: none;
     padding: 0;
-
 }
-ul li
-{
+
+ul li {
     font-size: 1rem;
-
 }
-ul li label{
+
+ul li label {
     cursor: pointer;
 }
-.animatecharecter{
+
+.animatecharecter {
     margin-left: 75px;
 }
-.animatecharecterw{
+
+.animatecharecterw {
     margin-right: 100px;
 }
-p{
+
+p {
     background-color: blanchedalmond;
     display: inline-flex;
     align-items: center;
@@ -130,6 +144,7 @@ p{
     font-family: 'Nanum Gothic', sans-serif;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -157,3 +172,10 @@ p{
 
 
 
+=======
+.gameover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+>>>>>>> 25a31745dd108f5f8c8a49ba61b3f3774c535d4b

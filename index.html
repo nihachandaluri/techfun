@@ -8,8 +8,8 @@
     <title>TECHFUN GAME</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
 
 </head>
 
@@ -24,12 +24,16 @@
     </script>
 
 
+<<<<<<< HEAD
     <div class="gamecontainer">
       
+=======
+    <div class="gamecontainer" id="gamecontainer">
+>>>>>>> 25a31745dd108f5f8c8a49ba61b3f3774c535d4b
         <p id="countdown">5:00</p>
         <div class="charecter" id="charecter"></div>
         <div class="quiz-container" id="quiz">
-           
+
             <div class="quiz-header">
                 <h2 id="question">Question Text</h2>
                 <ul>
@@ -54,7 +58,14 @@
             <button id="submit">Submit</button>
             
         </div>
-        <script src="script.js"></script>
+    </div>
+
+    <div class="gameover" id="gameover" style="display: none">
+        <div class="flexcont">
+            <h1>You've completed the game!</h1>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
