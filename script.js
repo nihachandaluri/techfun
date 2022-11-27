@@ -138,6 +138,11 @@ function getSelected() {
     })
     return answer
 }
+let popup = document.getElementById("popup");
+
+function openPopup(){
+    popup.classList.add("open-popup");
+}
 
 
 submitBtn.addEventListener('click', () => {
@@ -157,6 +162,7 @@ submitBtn.addEventListener('click', () => {
         loadQuiz()
 
     }
+    
     
 
 
