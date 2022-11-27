@@ -138,11 +138,6 @@ function getSelected() {
     })
     return answer
 }
-let popup = document.getElementById("popup");
-
-function openPopup(){
-    popup.classList.add("open-popup");
-}
 
 let nMoved = 0;
 
@@ -170,11 +165,6 @@ submitBtn.addEventListener('click', () => {
         loadQuiz()
 
     }
-<<<<<<< HEAD
-    
-    
-=======
->>>>>>> 25a31745dd108f5f8c8a49ba61b3f3774c535d4b
 
 
 

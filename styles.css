@@ -76,11 +76,6 @@ input {
     place-content: center;
     margin-top: 10px;
     font-family: 'Nanum Gothic', sans-serif;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 25a31745dd108f5f8c8a49ba61b3f3774c535d4b
 }
 
 .quiz-header {
@@ -143,39 +138,10 @@ p {
     margin-bottom: 1rem;
     font-family: 'Nanum Gothic', sans-serif;
 }
-
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
 .gameover {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #cccccc;
+    margin-top: 50px;
 }
->>>>>>> 25a31745dd108f5f8c8a49ba61b3f3774c535d4b
